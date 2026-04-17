@@ -222,7 +222,7 @@ export default function Contact() {
                           id="phone"
                           name="phone"
                           type="tel"
-                          placeholder="(312) 555-0100"
+                          placeholder="(872) 233-8382"
                           className="bg-card"
                         />
                       </div>
