@@ -45,11 +45,11 @@ export function CTASection() {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row justify-center gap-8 text-muted-foreground">
             <a 
-              href="tel:+1-312-555-0100" 
+              href="tel:+1-872-233-8382" 
               className="flex items-center gap-3 hover:text-primary transition-colors"
             >
               <Phone className="w-5 h-5 text-primary" />
-              (312) 555-0100
+              (872) 233-8382
             </a>
             <a 
               href="mailto:info@laaangroup.com" 
