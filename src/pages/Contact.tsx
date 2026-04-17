@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, CheckCircle } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const inquiryTypes = [
   { id: "consulting", label: "Logistics Consulting" },
@@ -23,19 +24,86 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message Sent",
-      description: "Thank you for your inquiry. Our team will respond within 24 hours.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-    setSelectedType("");
+
+    const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
+    const company = String(formData.get("company") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const inquiryLabel =
+      inquiryTypes.find((t) => t.id === selectedType)?.label ?? "General Inquiry";
+
+    try {
+      const id = crypto.randomUUID();
+
+      const { error: insertError } = await supabase
+        .from("contact_submissions")
+        .insert({
+          id,
+          name,
+          email,
+          phone: phone || null,
+          company: company || null,
+          inquiry_type: inquiryLabel,
+          message,
+        });
+
+      if (insertError) throw insertError;
+
+      // Confirmation email to the sender
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-confirmation",
+          recipientEmail: email,
+          idempotencyKey: `contact-confirm-${id}`,
+          templateData: { name, inquiryType: inquiryLabel },
+        },
+      });
+
+      // Internal notification to the LAAAN team
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-internal-notification",
+          recipientEmail: "info@laaanconsulting.com",
+          idempotencyKey: `contact-internal-${id}`,
+          templateData: {
+            name,
+            email,
+            phone,
+            company,
+            inquiryType: inquiryLabel,
+            message,
+            submittedAt: new Date().toLocaleString("en-US", {
+              dateStyle: "long",
+              timeStyle: "short",
+            }),
+          },
+        },
+      });
+
+      toast({
+        title: "Message Sent",
+        description:
+          "Thank you for your inquiry. Our team will respond within 24 hours.",
+      });
+
+      form.reset();
+      setSelectedType("");
+    } catch (err: any) {
+      console.error("Contact form error:", err);
+      toast({
+        title: "Submission failed",
+        description:
+          err?.message ??
+          "We couldn't send your message. Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
