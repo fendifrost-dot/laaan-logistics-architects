@@ -28,12 +28,20 @@ export function Footer() {
               <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="font-heading text-xl text-primary-foreground font-bold">L</span>
               </div>
-              <span className="font-heading text-2xl text-foreground">LAAAN</span>
+              <span className="font-heading text-2xl text-foreground">LAAAN Group</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Enterprise logistics consulting and operations platform. 
               Architecting scalable supply chain solutions from the Midwest.
             </p>
+            <address className="not-italic text-sm leading-relaxed text-muted-foreground">
+              <span className="block text-foreground font-medium">LAAAN Group</span>
+              4025 S. Western Blvd #108<br />
+              Chicago, IL 60609<br />
+              <a href="tel:+1-872-233-8382" className="hover:text-primary transition-colors">
+                (872) 233-8382
+              </a>
+            </address>
             <div className="flex items-center gap-4">
               <a
                 href="https://linkedin.com"
