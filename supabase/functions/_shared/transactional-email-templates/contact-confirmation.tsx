@@ -57,9 +57,9 @@ const ContactConfirmationEmail = ({
           <Text style={subtle}>
             LAAAN Group
             <br />
-            180 North Stetson Avenue, Suite 3500
+            4025 S. Western Blvd #108
             <br />
-            Chicago, IL 60601
+            Chicago, IL 60609
           </Text>
         </Section>
       </Container>
