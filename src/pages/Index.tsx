@@ -6,6 +6,7 @@ import { WhySection } from "@/components/home/WhySection";
 import { MarketsSection } from "@/components/home/MarketsSection";
 import { InvestorSection } from "@/components/home/InvestorSection";
 import { CTASection } from "@/components/home/CTASection";
+import { PricingSection } from "@/components/home/PricingSection";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServicesSection />
+        <PricingSection />
         <WhySection />
         <MarketsSection />
         <InvestorSection />
