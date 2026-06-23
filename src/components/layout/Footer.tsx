@@ -89,9 +89,9 @@ export function Footer() {
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span>
-                  180 North Stetson Avenue<br />
-                  Suite 3500<br />
-                  Chicago, IL 60601
+                  <span className="block text-foreground font-medium">LAAAN Group</span>
+                  4025 S. Western Blvd #108<br />
+                  Chicago, IL 60609
                 </span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground text-sm">
@@ -113,7 +113,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} LAAAN Group, Inc. All rights reserved.
+            © {new Date().getFullYear()} LAAAN Group. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <Link to="/privacy" className="hover:text-primary transition-colors">
