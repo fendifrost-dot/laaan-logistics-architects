@@ -260,7 +260,7 @@ export default function Contact() {
                         <Input
                           id="company"
                           name="company"
-                          placeholder="Acme Corporation"
+                          placeholder="Acme Logistics"
                           className="bg-card"
                         />
                       </div>

@@ -89,7 +89,7 @@ export const template = {
     name: 'Jane Smith',
     email: 'jane@example.com',
     phone: '(312) 555-0142',
-    company: 'Acme Corp',
+    company: 'Acme Logistics',
     inquiryType: 'Logistics Consulting',
     message:
       'Looking to optimize last-mile operations across three Midwest DCs. When can we schedule a discovery call?',

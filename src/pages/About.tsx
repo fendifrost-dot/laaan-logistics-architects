@@ -22,8 +22,8 @@ const milestones = [
   },
   {
     year: "2024",
-    title: "Corporate Restructuring",
-    description: "Transitioned from LLC to C-Corporation structure to support institutional capital and national expansion."
+    title: "Institutional Restructuring",
+    description: "Strengthened governance and capital structure to support institutional partners and national expansion."
   },
   {
     year: "2025",
@@ -163,7 +163,7 @@ export default function About() {
                 Structured for Growth
               </h2>
               <p className="text-xl text-muted-foreground mb-10">
-                Our transition to a C-Corporation structure positions LAAAN Group for 
+                Our governance and capital structure positions LAAAN Group for 
                 institutional capital, strategic partnerships, and national expansion. 
                 We're building infrastructure designed for scale.
               </p>
