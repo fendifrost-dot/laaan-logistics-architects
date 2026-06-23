@@ -154,9 +154,8 @@ export default function Contact() {
                       <div>
                         <p className="text-foreground font-medium">Address</p>
                         <p className="text-muted-foreground text-sm">
-                          180 North Stetson Avenue<br />
-                          Suite 3500<br />
-                          Chicago, IL 60601
+                          4025 S. Western Blvd #108<br />
+                          Chicago, IL 60609
                         </p>
                       </div>
                     </div>
