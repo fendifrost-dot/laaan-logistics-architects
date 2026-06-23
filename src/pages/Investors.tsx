@@ -45,8 +45,8 @@ const investmentHighlights = [
 const structureAdvantages = [
   {
     icon: Building,
-    title: "C-Corporation Structure",
-    description: "Optimized for institutional capital, preferred stock issuance, and potential public offering pathway."
+    title: "Institutional Structure",
+    description: "Optimized for institutional capital, preferred equity issuance, and long-term growth pathways."
   },
   {
     icon: Shield,
@@ -170,7 +170,7 @@ export default function Investors() {
                   Institutional-Grade Structure
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Our corporate restructuring from LLC to C-Corporation positions LAAAN Group 
+                  Our governance and capital structure positions LAAAN Group 
                   for institutional capital, strategic acquisitions, and long-term value creation. 
                   We've built infrastructure designed for scale and governance.
                 </p>

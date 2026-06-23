@@ -37,8 +37,8 @@ const highlights = [
   },
   {
     icon: Building,
-    title: "C-Corp Restructuring",
-    description: "Corporate structure optimized for institutional capital and governance"
+    title: "Institutional Restructuring",
+    description: "Capital structure optimized for institutional partners and governance"
   }
 ];
 
