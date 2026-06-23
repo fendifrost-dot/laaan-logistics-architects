@@ -55,7 +55,7 @@ const ContactConfirmationEmail = ({
           <Hr style={hr} />
 
           <Text style={subtle}>
-            LAAAN Group, Inc.
+            LAAAN Group
             <br />
             180 North Stetson Avenue, Suite 3500
             <br />
