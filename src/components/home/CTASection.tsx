@@ -30,14 +30,14 @@ export function CTASection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/contact">
-                Request Consulting
+              <Link to="/#pricing">
+                View Packages & Pricing
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <Link to="/contact">
-                Partner With Us
+                Talk to Our Team
               </Link>
             </Button>
           </div>
