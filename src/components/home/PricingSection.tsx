@@ -111,7 +111,7 @@ function CtaButton({
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="py-24 bg-card relative overflow-hidden scroll-mt-24">
+    <section id="pricing" className="py-16 md:py-24 bg-card relative overflow-hidden scroll-mt-24">
       <div className="absolute inset-0 bg-gradient-glow opacity-20" />
 
       <div className="container mx-auto px-6 relative z-10">
