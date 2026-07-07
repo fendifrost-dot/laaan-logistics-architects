@@ -7,10 +7,11 @@ import { MarketsSection } from "@/components/home/MarketsSection";
 import { InvestorSection } from "@/components/home/InvestorSection";
 import { CTASection } from "@/components/home/CTASection";
 import { PricingSection } from "@/components/home/PricingSection";
+import { MobilePricingBar } from "@/components/home/MobilePricingBar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-20 md:pb-0">
       <Header />
       <main>
         <HeroSection />
@@ -22,6 +23,7 @@ const Index = () => {
         <CTASection />
       </main>
       <Footer />
+      <MobilePricingBar />
     </div>
   );
 };

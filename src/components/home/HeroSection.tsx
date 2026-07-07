@@ -31,36 +31,41 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             Architecting Scalable
             <span className="block text-gradient">Supply Chain Systems</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Strategic logistics consulting and execution for enterprises ready to optimize, 
             scale, and dominate their delivery infrastructure.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 mb-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <Button variant="hero" size="xl" asChild>
-              <Link to="/contact">
-                Request Consulting
+              <Link to="/#pricing">
+                View Packages & Pricing
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/investors">
-                Investor Inquiries
+              <Link to="/contact">
+                Request Consulting
               </Link>
             </Button>
           </div>
+          <div className="mb-16 animate-fade-up" style={{ animationDelay: '0.35s' }}>
+            <Link to="/investors" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+              Investor & lender inquiries <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-border animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
               <div>
@@ -69,7 +74,7 @@ export function HeroSection() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
                 <Truck className="w-6 h-6 text-primary" />
               </div>
               <div>
@@ -78,7 +83,7 @@ export function HeroSection() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
                 <Network className="w-6 h-6 text-primary" />
               </div>
               <div>

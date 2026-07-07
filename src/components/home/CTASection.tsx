@@ -4,7 +4,7 @@ import { ArrowRight, Phone, Mail } from "lucide-react";
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-card relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-card relative overflow-hidden">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-[0.02]"
@@ -30,14 +30,14 @@ export function CTASection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <Button variant="hero" size="xl" asChild>
-              <Link to="/contact">
-                Request Consulting
+              <Link to="/#pricing">
+                View Packages & Pricing
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <Link to="/contact">
-                Partner With Us
+                Talk to Our Team
               </Link>
             </Button>
           </div>

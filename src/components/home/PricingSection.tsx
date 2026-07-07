@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles } from "lucide-react";
 
-// Stripe Payment Link placeholders — replace with real URLs after Stripe setup
-const STRIPE_DIAGNOSTIC_URL = "#STRIPE_DIAGNOSTIC_URL";
-const STRIPE_OPTIMIZE_URL = "#STRIPE_OPTIMIZE_URL";
-const STRIPE_SCALE_URL = "#STRIPE_SCALE_URL";
+const STRIPE_DIAGNOSTIC_URL = "https://buy.stripe.com/14kdRdaTNbK382AcMM";
+const STRIPE_OPTIMIZE_URL = "https://buy.stripe.com/28odRdaTNbK30A8001";
+const STRIPE_SCALE_URL = "https://buy.stripe.com/fZe3cD3vlbK33Mkg02";
 
 const tiers = [
   {
@@ -112,7 +111,7 @@ function CtaButton({
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="py-24 bg-card relative overflow-hidden scroll-mt-24">
+    <section id="pricing" className="py-16 md:py-24 bg-card relative overflow-hidden scroll-mt-24">
       <div className="absolute inset-0 bg-gradient-glow opacity-20" />
 
       <div className="container mx-auto px-6 relative z-10">
