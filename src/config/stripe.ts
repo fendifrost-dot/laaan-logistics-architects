@@ -1,6 +1,11 @@
 /**
  * Live Stripe Payment Links for LAAAN Group packages.
  * Update here only — PricingSection and any CTAs should import from this file.
+ *
+ * Stripe Dashboard: rename products to match site language for checkout clarity:
+ *   - "Logistics Intelligence Diagnostic" ($1,950 one-time)
+ *   - "Optimize Retainer" ($2,500/mo)
+ *   - "Scale Retainer" ($6,000/mo)
  */
 export const STRIPE_PAYMENT_LINKS = {
   diagnostic: "https://buy.stripe.com/8x2cN47jO0GY06G7kyaIM00",

@@ -35,9 +35,9 @@ const markets = [
     icon: HeartPulse,
     name: "Healthcare & Medical",
     tagline: "Time-Critical Medical Logistics",
-    description: "HIPAA-compliant courier services and logistics consulting for hospital systems, laboratories, pharmaceutical distributors, and medical device companies.",
+    description: "Healthcare logistics consulting and time-critical transport programs designed with privacy, chain-of-custody, and regulatory awareness for hospital systems, laboratories, and pharmaceutical distributors.",
     challenges: [
-      "Regulatory compliance requirements",
+      "Privacy-aware handling procedures",
       "Temperature-sensitive shipments",
       "Stat delivery timing",
       "Chain of custody documentation"
@@ -46,7 +46,7 @@ const markets = [
       "Dedicated medical courier networks",
       "Temperature-controlled transport",
       "Real-time tracking with alerts",
-      "Compliance documentation systems"
+      "Chain-of-custody documentation",
     ]
   },
   {

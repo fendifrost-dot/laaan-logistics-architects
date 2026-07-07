@@ -2,7 +2,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Rocket, Building2, Handshake } from "lucide-react";
+import { ArrowRight, Target, Rocket, Building2, Handshake, Users } from "lucide-react";
+import { BRAND } from "@/config/brand";
 
 const milestones = [
   {
@@ -30,6 +31,21 @@ const milestones = [
     title: "National Platform",
     description: "Building a coast-to-coast logistics consulting and execution network."
   }
+];
+
+const leadership = [
+  {
+    role: "Operations Leadership",
+    focus: "Last-mile execution, fleet strategy, and carrier network management across Midwest markets.",
+  },
+  {
+    role: "Consulting Leadership",
+    focus: "Supply chain design, cost optimization, and enterprise advisory engagements.",
+  },
+  {
+    role: "Growth & Partnerships",
+    focus: "Investor relations, lender coordination, and strategic partnership development.",
+  },
 ];
 
 const values = [
@@ -151,6 +167,45 @@ export default function About() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership */}
+        <section className="py-20 bg-card">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mx-auto mb-6">
+                <Users className="w-7 h-7 text-primary" />
+              </div>
+              <h2 className="font-heading text-4xl text-foreground mb-4">Leadership Team</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                {BRAND.name} is led by operators and advisors with hands-on logistics,
+                consulting, and growth experience. Request an introduction through our
+                contact page for investor, lender, or enterprise discussions.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {leadership.map((leader) => (
+                <div
+                  key={leader.role}
+                  className="p-6 rounded-xl bg-background border border-border"
+                >
+                  <h3 className="font-heading text-xl text-foreground mb-3">
+                    {leader.role}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {leader.focus}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Button variant="outline" asChild>
+                <Link to="/contact">
+                  Request an Executive Introduction <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>

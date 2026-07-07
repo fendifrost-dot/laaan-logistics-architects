@@ -69,8 +69,8 @@ export function HeroSection() {
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-heading text-foreground">35%</p>
-                <p className="text-sm text-muted-foreground">Avg. Cost Reduction</p>
+                <p className="text-2xl font-heading text-foreground">Proven</p>
+                <p className="text-sm text-muted-foreground">Cost Improvement Track Record*</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -92,6 +92,10 @@ export function HeroSection() {
               </div>
             </div>
           </div>
+          <p className="text-xs text-muted-foreground mt-4 max-w-2xl">
+            *Results vary by client, network, and implementation. See our{" "}
+            <Link to="/terms" className="text-primary hover:underline">Terms of Service</Link>.
+          </p>
         </div>
       </div>
 

@@ -54,7 +54,7 @@ const services = [
   {
     icon: HeartPulse,
     title: "Medical & Time-Critical Transport",
-    description: "HIPAA-compliant courier services designed for healthcare systems, laboratories, and pharmaceutical distributors.",
+    description: "Healthcare logistics programs designed with privacy and chain-of-custody requirements in mind for hospital systems, laboratories, and pharmaceutical distributors.",
     features: [
       "Lab specimen transport",
       "Pharmaceutical delivery",

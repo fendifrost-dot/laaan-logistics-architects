@@ -18,27 +18,27 @@ import {
 const investmentHighlights = [
   {
     icon: TrendingUp,
-    metric: "$50M+",
-    label: "Annual Freight Volume",
-    description: "Proven operational scale with recurring enterprise relationships"
+    metric: "Multi-Market",
+    label: "Operations Footprint",
+    description: "Last-mile, freight, and consulting capabilities across Midwest markets"
   },
   {
     icon: DollarSign,
-    metric: "35%",
-    label: "Avg. Cost Savings",
-    description: "Demonstrated value creation for enterprise clients"
+    metric: "Value-Focused",
+    label: "Client Outcomes",
+    description: "Engagements structured around measurable cost and service improvements"
   },
   {
     icon: FileCheck,
-    metric: "Multi-Year",
-    label: "Enterprise Contracts",
-    description: "Long-term agreements with Fortune 500 companies"
+    metric: "Recurring",
+    label: "Advisory Revenue",
+    description: "Retainer and project models designed for predictable consulting cash flow"
   },
   {
     icon: Truck,
     metric: "Asset-Backed",
-    label: "Fleet Model",
-    description: "Tangible assets supporting growth financing"
+    label: "Fleet Operations",
+    description: "Operational fleet assets supporting execution and growth financing discussions"
   }
 ];
 
@@ -270,6 +270,19 @@ export default function Investors() {
                 </Button>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-card border-t border-border">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <p className="text-sm text-muted-foreground leading-relaxed text-center">
+              <strong className="text-foreground">Important notice:</strong> Information on
+              this page is for general informational purposes only and does not constitute
+              an offer to sell or a solicitation to buy securities. Financial metrics,
+              projections, and operational statements are illustrative unless provided in a
+              signed data room or offering document. Past client outcomes do not guarantee
+              future results. Request official materials for diligence review.
+            </p>
           </div>
         </section>
       </main>

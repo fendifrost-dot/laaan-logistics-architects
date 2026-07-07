@@ -266,6 +266,17 @@ export function PricingSection() {
             ))}
           </ul>
         </div>
+
+        <p className="mt-8 text-center text-sm text-muted-foreground">
+          Questions about billing, cancellations, or the diagnostic credit?{" "}
+          <Link to="/billing" className="text-primary hover:underline">
+            View Billing & FAQ
+          </Link>{" "}
+          ·{" "}
+          <Link to="/refunds" className="text-primary hover:underline">
+            Refund Policy
+          </Link>
+        </p>
       </div>
     </section>
   );

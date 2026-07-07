@@ -53,8 +53,8 @@ export function WhySection() {
 
             {/* Key Metric */}
             <div className="p-6 rounded-2xl bg-gradient-card border border-border inline-block">
-              <p className="text-4xl font-heading text-primary mb-2">$50M+</p>
-              <p className="text-muted-foreground text-sm">Freight Volume Managed Annually</p>
+              <p className="text-4xl font-heading text-primary mb-2">24/7</p>
+              <p className="text-muted-foreground text-sm">Operations Coverage</p>
             </div>
           </div>
 

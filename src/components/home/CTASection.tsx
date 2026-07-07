@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail } from "lucide-react";
+import { BRAND } from "@/config/brand";
 
 export function CTASection() {
   return (
@@ -45,18 +46,18 @@ export function CTASection() {
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row justify-center gap-8 text-muted-foreground">
             <a 
-              href="tel:+1-872-233-8382" 
+              href={`tel:${BRAND.phoneTel}`}
               className="flex items-center gap-3 hover:text-primary transition-colors"
             >
               <Phone className="w-5 h-5 text-primary" />
-              (872) 233-8382
+              {BRAND.phone}
             </a>
             <a 
-              href="mailto:info@laaangroup.com" 
+              href={`mailto:${BRAND.email}`}
               className="flex items-center gap-3 hover:text-primary transition-colors"
             >
               <Mail className="w-5 h-5 text-primary" />
-              info@laaangroup.com
+              {BRAND.email}
             </a>
           </div>
         </div>

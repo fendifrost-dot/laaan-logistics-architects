@@ -15,6 +15,8 @@ import Pricing from "./pages/Pricing";
 import Careers from "./pages/Careers";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Billing from "./pages/Billing";
+import Refunds from "./pages/Refunds";
 import { ScrollToHash } from "./components/ScrollToHash";
 
 const queryClient = new QueryClient();
@@ -39,6 +41,8 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/billing" element={<Billing />} />
+          <Route path="/refunds" element={<Refunds />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

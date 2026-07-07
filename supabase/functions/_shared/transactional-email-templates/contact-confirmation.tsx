@@ -45,9 +45,13 @@ const ContactConfirmationEmail = ({
             member of our team will respond within one business day.
           </Text>
           <Text style={text}>
-            For urgent operational matters, our team is reachable directly at{' '}
+            For urgent operational matters, our team is reachable directly at{" "}
             <a href="tel:+18722338382" style={link}>
               (872) 233-8382
+            </a>{" "}
+            or{" "}
+            <a href="mailto:info@laaanconsulting.com" style={link}>
+              info@laaanconsulting.com
             </a>
             .
           </Text>
@@ -55,11 +59,13 @@ const ContactConfirmationEmail = ({
           <Hr style={hr} />
 
           <Text style={subtle}>
-            LAAAN Group
+            LAAAN GROUP LLC
             <br />
             4025 S. Western Blvd #108
             <br />
             Chicago, IL 60609
+            <br />
+            laaanconsulting.com
           </Text>
         </Section>
       </Container>

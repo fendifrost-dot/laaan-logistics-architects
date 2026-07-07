@@ -32,7 +32,7 @@ const services = [
   {
     icon: HeartPulse,
     title: "Medical & Time-Critical Transport",
-    description: "HIPAA-compliant medical courier services for healthcare systems and laboratories.",
+    description: "Healthcare logistics programs designed with privacy and chain-of-custody requirements in mind.",
     href: "/services/medical-courier"
   },
   {

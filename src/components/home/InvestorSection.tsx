@@ -18,7 +18,7 @@ const highlights = [
   {
     icon: FileCheck,
     title: "Recurring Enterprise Contracts",
-    description: "Long-term agreements with Fortune 500 and mid-market enterprises"
+    description: "Long-term agreements with enterprise and mid-market clients"
   },
   {
     icon: Truck,

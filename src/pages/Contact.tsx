@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, CheckCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { BRAND } from "@/config/brand";
 
 const inquiryTypes = [
   { id: "consulting", label: "Logistics Consulting" },
@@ -24,6 +25,16 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!selectedType) {
+      toast({
+        title: "Select an inquiry type",
+        description: "Please choose the option that best describes your request.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     const form = e.currentTarget;
     setIsSubmitting(true);
 
@@ -67,7 +78,7 @@ export default function Contact() {
       await supabase.functions.invoke("send-transactional-email", {
         body: {
           templateName: "contact-internal-notification",
-          recipientEmail: "info@laaanconsulting.com",
+          recipientEmail: BRAND.email,
           idempotencyKey: `contact-internal-${id}`,
           templateData: {
             name,
@@ -92,13 +103,15 @@ export default function Contact() {
 
       form.reset();
       setSelectedType("");
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Contact form error:", err);
+      const message =
+        err instanceof Error
+          ? err.message
+          : "We couldn't send your message. Please try again or call us directly.";
       toast({
         title: "Submission failed",
-        description:
-          err?.message ??
-          "We couldn't send your message. Please try again or call us directly.",
+        description: message,
         variant: "destructive",
       });
     } finally {
@@ -165,8 +178,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-foreground font-medium">Phone</p>
-                        <a href="tel:+1-872-233-8382" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                          (872) 233-8382
+                        <a href={`tel:${BRAND.phoneTel}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                          {BRAND.phone}
                         </a>
                       </div>
                     </div>
@@ -176,8 +189,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-foreground font-medium">Email</p>
-                        <a href="mailto:info@laaangroup.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                          info@laaangroup.com
+                        <a href={`mailto:${BRAND.email}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                          {BRAND.email}
                         </a>
                       </div>
                     </div>
@@ -219,7 +232,7 @@ export default function Contact() {
                     {/* Inquiry Type */}
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-3">
-                        Inquiry Type
+                        Inquiry Type *
                       </label>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                         {inquiryTypes.map((type) => (
