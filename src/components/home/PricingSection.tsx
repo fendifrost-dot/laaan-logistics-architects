@@ -1,12 +1,7 @@
-// redeploy trigger
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles } from "lucide-react";
-
-// Stripe payment links (verified live)
-const STRIPE_DIAGNOSTIC_URL = "https://buy.stripe.com/8x2cN47jO0GY06G7kyaIM00";
-const STRIPE_OPTIMIZE_URL = "https://buy.stripe.com/7sY00i7jO4Xe7z834iaIM01";
-const STRIPE_SCALE_URL = "https://buy.stripe.com/6oUcN4cE8cpG8DcbAOaIM02";
+import { STRIPE_PAYMENT_LINKS } from "@/config/stripe";
 
 const tiers = [
   {
@@ -23,7 +18,7 @@ const tiers = [
       "Monthly KPI snapshot",
     ],
     cta: "Get Started",
-    href: STRIPE_OPTIMIZE_URL,
+    href: STRIPE_PAYMENT_LINKS.optimize,
     external: true,
     badge: null as string | null,
     featured: false,
@@ -44,7 +39,7 @@ const tiers = [
       "Live KPI dashboard",
     ],
     cta: "Scale Now",
-    href: STRIPE_SCALE_URL,
+    href: STRIPE_PAYMENT_LINKS.scale,
     external: true,
     badge: "Most Popular",
     featured: true,
@@ -171,7 +166,7 @@ export function PricingSection() {
                 <span className="font-heading text-5xl text-foreground">$1,950</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6">one-time</p>
-              <CtaButton href={STRIPE_DIAGNOSTIC_URL} external featured>
+              <CtaButton href={STRIPE_PAYMENT_LINKS.diagnostic} external featured>
                 Book Diagnostic
               </CtaButton>
             </div>
