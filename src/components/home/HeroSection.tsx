@@ -31,7 +31,7 @@ export function HeroSection() {
           </div>
 
           {/* Headline */}
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-[1.1] mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             Architecting Scalable
             <span className="block text-gradient">Supply Chain Systems</span>
           </h1>
