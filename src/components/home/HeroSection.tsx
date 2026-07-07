@@ -63,9 +63,9 @@ export function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border animate-fade-up" style={{ animationDelay: '0.4s' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-border animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
               <div>
@@ -74,7 +74,7 @@ export function HeroSection() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
                 <Truck className="w-6 h-6 text-primary" />
               </div>
               <div>
@@ -83,7 +83,7 @@ export function HeroSection() {
               </div>
             </div>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center shrink-0">
                 <Network className="w-6 h-6 text-primary" />
               </div>
               <div>
