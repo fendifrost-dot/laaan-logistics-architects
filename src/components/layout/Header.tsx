@@ -62,7 +62,7 @@ export function Header() {
             <Link to="/contact">Contact</Link>
           </Button>
           <Button variant="hero" size="sm" asChild>
-            <Link to="/#pricing">Get Started</Link>
+            <Link to="/pricing">Get Started</Link>
           </Button>
         </div>
 
@@ -98,7 +98,7 @@ export function Header() {
                 <Link to="/contact">Contact</Link>
               </Button>
               <Button variant="hero" asChild>
-                <Link to="/#pricing">Get Started</Link>
+                <Link to="/pricing">Get Started</Link>
               </Button>
             </div>
           </nav>
