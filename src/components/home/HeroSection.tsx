@@ -37,7 +37,7 @@ export function HeroSection() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Strategic logistics consulting and execution for enterprises ready to optimize, 
             scale, and dominate their delivery infrastructure.
           </p>
