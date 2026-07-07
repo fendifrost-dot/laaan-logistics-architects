@@ -45,7 +45,7 @@ export function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <Button variant="hero" size="xl" asChild>
-              <Link to="/#pricing">
+              <Link to="/pricing">
                 View Packages & Pricing
                 <ArrowRight className="w-5 h-5" />
               </Link>
