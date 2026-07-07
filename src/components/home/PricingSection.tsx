@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles } from "lucide-react";
 
-// Stripe Payment Link placeholders — replace with real URLs after Stripe setup
-const STRIPE_DIAGNOSTIC_URL = "#STRIPE_DIAGNOSTIC_URL";
-const STRIPE_OPTIMIZE_URL = "#STRIPE_OPTIMIZE_URL";
-const STRIPE_SCALE_URL = "#STRIPE_SCALE_URL";
+const STRIPE_DIAGNOSTIC_URL = "https://buy.stripe.com/14kdRdaTNbK382AcMM";
+const STRIPE_OPTIMIZE_URL = "https://buy.stripe.com/28odRdaTNbK30A8001";
+const STRIPE_SCALE_URL = "https://buy.stripe.com/fZe3cD3vlbK33Mkg02";
 
 const tiers = [
   {
