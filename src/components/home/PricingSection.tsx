@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles } from "lucide-react";
 
+// Stripe payment links (verified live)
 const STRIPE_DIAGNOSTIC_URL = "https://buy.stripe.com/8x2cN47jO0GY06G7kyaIM00";
 const STRIPE_OPTIMIZE_URL = "https://buy.stripe.com/7sY00i7jO4Xe7z834iaIM01";
 const STRIPE_SCALE_URL = "https://buy.stripe.com/6oUcN4cE8cpG8DcbAOaIM02";
