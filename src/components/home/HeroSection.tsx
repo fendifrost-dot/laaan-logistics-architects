@@ -43,18 +43,23 @@ export function HeroSection() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 mb-6 animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <Button variant="hero" size="xl" asChild>
-              <Link to="/contact">
-                Request Consulting
+              <Link to="/#pricing">
+                View Packages & Pricing
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/investors">
-                Investor Inquiries
+              <Link to="/contact">
+                Request Consulting
               </Link>
             </Button>
+          </div>
+          <div className="mb-16 animate-fade-up" style={{ animationDelay: '0.35s' }}>
+            <Link to="/investors" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+              Investor & lender inquiries <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
           {/* Stats */}
