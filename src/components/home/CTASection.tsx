@@ -4,7 +4,7 @@ import { ArrowRight, Phone, Mail } from "lucide-react";
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-card relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-card relative overflow-hidden">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-[0.02]"
