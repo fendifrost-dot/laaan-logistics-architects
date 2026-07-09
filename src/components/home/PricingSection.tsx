@@ -239,6 +239,28 @@ export function PricingSection() {
           ))}
         </div>
 
+        {/* Consulting Call — bookable hourly */}
+        <div className="mt-10 rounded-2xl bg-gradient-card border border-primary/30 p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <h3 className="font-heading text-2xl text-foreground mb-2">
+              Book a Consulting Call
+            </h3>
+            <p className="text-muted-foreground text-sm max-w-xl">
+              One-on-one strategy session with our logistics team — carrier costs, routing,
+              fulfillment, or funding-readiness questions. Choose 1 or 2 hours at checkout.
+            </p>
+          </div>
+          <div className="flex items-center gap-6 shrink-0">
+            <div className="text-right">
+              <span className="font-heading text-3xl text-foreground">$250</span>
+              <span className="text-muted-foreground text-sm"> / hour</span>
+            </div>
+            <CtaButton href={STRIPE_PAYMENT_LINKS.consultingCall} external featured>
+              Book a Call
+            </CtaButton>
+          </div>
+        </div>
+
         {/* Add-ons */}
         <div className="mt-16 rounded-2xl bg-background/40 border border-border p-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
